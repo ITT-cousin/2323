@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>泰式青木瓜絲</title>
+    <style>
+        body {
+            background-color: #FFF8DC;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: blue;
+            margin-top: 30px;
+        }
+        .ingredients {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+        .steps {
+            margin: 20px auto;
+            width: 30%;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 30px;
+            font-size: 20px;
+            color: #007BFF;
+            text-align: center;
+        }
+        /* 圖片區塊 */
+        .ingredient-image {
+            display: none; /* 預設隱藏 */
+            margin: 10px auto;
+            max-width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+    <script>
+        function showImage(id) {
+            // 先隱藏所有圖片
+            const imgs = document.querySelectorAll('.ingredient-image');
+            imgs.forEach(img => img.style.display = 'none');
+
+            // 顯示被點擊的圖片
+            const img = document.getElementById(id);
+            img.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>泰式青木瓜絲</h1>
+
+    <div class="ingredients">
+        <div class="section-title">材料</div>
+        <p><a href="javascript:void(0);" onclick="showImage('fishSauce')">魚露 1.5 匙</a></p>
+        <p><a href="javascript:void(0);" onclick="showImage('lemonJuice')">檸檬汁 1.5 匙</a></p>
+        <p><a href="javascript:void(0);" onclick="showImage('palmSugar')">棕櫚糖 0.8 匙</a></p>
+        <p><a href="javascript:void(0);" onclick="showImage('garlic')">蒜頭 半匙</a></p>
+        <p><a href="javascript:void(0);" onclick="showImage('chili')">辣椒 1 根</a></p>
+
+        <!-- 對應圖片 -->
+        <img id="fishSauce" class="ingredient-image" src="https://i5.momoshop.com.tw/1749532854/goodsimg/TP000/5819/0000/270/TP00058190000270_R_m.jpg" alt="魚露">
+        <img id="lemonJuice" class="ingredient-image" src="https://i4.momoshop.com.tw/1692543965/goodsimg/0003/445/189/3445189_O_m.webp" alt="檸檬汁">
+        <img id="palmSugar" class="ingredient-image" src="https://static.iyp.tw/17355/products/photooriginal-2205153-zN9H9.jpg?large" alt="棕櫚糖">
+        <img id="garlic" class="ingredient-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNPTtdChaYHLbNB0BfjjXnhmxbQ8XAxjt4jg&s" alt="蒜頭">
+        <img id="chili" class="ingredient-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWhHEChQdvd0j1Cn8RhjJq7ingDKXmHNRRIQ&s" alt="辣椒">
+    </div>
+
+    <div class="steps">
+        <div class="section-title">製作方式</div>
+        <p>1. 先將青木瓜去皮、刨成細絲，泡冷水 5 分鐘後瀝乾，讓口感更脆。</p>
+        <p>2. 將蒜頭與辣椒放入缽中，用杵輕輕搗碎出香氣。</p>
+        <p>3. 加入棕櫚糖、魚露、檸檬汁，一邊搗一邊攪，讓糖完全溶化。</p>
+        <p>4. 加入青木瓜絲及番茄（可選），輕輕搗拌讓醬汁入味。</p>
+        <p>5. 試味後調整酸甜鹹辣比例，裝盤即可享用。</p>
+    </div>
+</body>
+</html>
